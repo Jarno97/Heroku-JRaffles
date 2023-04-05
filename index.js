@@ -1,7 +1,19 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const app = express();
 const fs = require('fs');
 const bodyParser = require('body-parser');
+
+mongoose.connect('mongodb+srv://jarno:Gmjgunner1@cluster0.glxxlf3.mongodb.net/JRaffles?retryWrites=true&w=majority', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
+    .then(() => console.log('Connected to MongoDB'))
+    .catch((err) => console.error('Error connecting to MongoDB', err));
+
+
+
+
 app.use(bodyParser.json());
 
 
@@ -19,14 +31,8 @@ app.post('/success', (req, res) => {
     console.log(req.body)
     // var data = JSON.parse(req);
 
-    fs.appendFile('proxy.txt', `${req}\n`, (err) => {
-        if (err) {
-            console.error(err);
-            res.status(500).send('Error saving data');
-        } else {
-            res.status(200).send('Data saved successfully');
-        }
-    });
+
+
 })
 
 // Start the server
