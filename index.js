@@ -41,9 +41,9 @@ app.get('/version', (req, res) => {
 });
 
 app.get('/entries/xJ4doru9Dkfwda9', (req, res) => {
-    var Entries = Entry.find({});
-    console.log(Entries)
-    res.send(JSON.stringify(Entries));
+    var Entries = Entry.find();
+
+    res.send(Entries);
 })
 
 app.post('/success', (req, res) => {
