@@ -17,7 +17,6 @@ mongoose.connect('mongodb+srv://jarno:Gmjgunner1@cluster0.glxxlf3.mongodb.net/JR
 app.use(bodyParser.json());
 
 
-// Define your endpoint that will return the latest version number
 app.get('/version', (req, res) => {
     // Here you can implement logic to check for the latest version of your application
     // For example, you could read the latest version from a JSON file or from a database
