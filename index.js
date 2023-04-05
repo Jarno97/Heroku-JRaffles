@@ -12,7 +12,21 @@ mongoose.connect('mongodb+srv://jarno:Gmjgunner1@cluster0.glxxlf3.mongodb.net/JR
     .catch((err) => console.error('Error connecting to MongoDB', err));
 
 
+const entrySchema = new mongoose.Schema({
+    username: {
+        type: "string",
+        required: [true, "Your submission must have a username"],
+    },
+    entrydata: {
+        type: "string",
+    },
+    proxy: {
+        type: "string",
+        default: "unknown",
+    }
+});
 
+const Entry = mongoose.model("Chord", entrySchema);
 
 app.use(bodyParser.json());
 
