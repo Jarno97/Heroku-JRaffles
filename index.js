@@ -41,11 +41,12 @@ app.get('/version', (req, res) => {
 });
 
 app.get('/entries/xJ4doru9Dkfwda9', (req, res) => {
+    var entries;
     async function getEntries() {
         var Entries = await Entry.find();
         return Entries;
     }
-
+    console.log(getEntries())
     res.send(getEntries());
 })
 
