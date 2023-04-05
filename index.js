@@ -41,14 +41,7 @@ app.get('/version', (req, res) => {
 });
 
 app.get('/entries/xJ4doru9Dkfwda9', (req, res) => {
-    var Entries;
-    Entry.find({}, (err, documents) => {
-        if (err) {
-            console.error(err);
-        } else {
-            Entries = documents;
-        }
-    });
+    var Entries = Entry.find({})
     res.send(Entries);
 })
 
