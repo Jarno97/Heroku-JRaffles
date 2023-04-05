@@ -26,7 +26,7 @@ const entrySchema = new mongoose.Schema({
     }
 });
 
-const Entry = mongoose.model("Chord", entrySchema);
+const Entry = mongoose.model("Entry", entrySchema);
 
 app.use(bodyParser.json());
 
@@ -42,7 +42,7 @@ app.get('/version', (req, res) => {
 
 app.post('/success', (req, res) => {
     console.log(req.body)
-    var data = JSON.parse(req);
+    var data = JSON.parse(req.body);
     try {
         Entry.create(data);
         res.status(200).send('Data saved successfully');
