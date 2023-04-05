@@ -41,9 +41,12 @@ app.get('/version', (req, res) => {
 });
 
 app.get('/entries/xJ4doru9Dkfwda9', (req, res) => {
-    var Entries = Entry.find();
+    async function getEntries() {
+        var Entries = await Entry.find();
+        return Entries;
+    }
 
-    res.send(Entries);
+    res.send(getEntries());
 })
 
 app.post('/success', (req, res) => {
