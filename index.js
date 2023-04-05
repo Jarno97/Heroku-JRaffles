@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const fs = require('fs');
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
 
 
 // Define your endpoint that will return the latest version number
