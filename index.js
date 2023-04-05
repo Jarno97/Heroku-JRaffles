@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const fs = require('fs');
 
 
 // Define your endpoint that will return the latest version number
@@ -11,6 +12,19 @@ app.get('/version', (req, res) => {
     // Check if the latest version is different from the current version
 
 });
+
+app.post('/success', (req, res) => {
+    var data = req.body;
+
+    fs.appendFile('proxy.txt', `${data.proxy}\n`, (err) => {
+        if (err) {
+            console.error(err);
+            res.status(500).send('Error saving data');
+        } else {
+            res.status(200).send('Data saved successfully');
+        }
+    });
+})
 
 // Start the server
 const port = process.env.PORT || 3000;
