@@ -42,8 +42,9 @@ app.get('/version', (req, res) => {
 
 app.get('/entries/xJ4doru9Dkfwda9/:username', async (req, res) => {
     let username = req.params.username;
+    console.log(username);
     try {
-        const documents = await Entry.find({ username: `${username}` }); // Retrieve all documents from the collection
+        const documents = await Entry.find({ username: username }); // Retrieve all documents from the collection
         res.status(200).json(documents); // Return the documents as a JSON response
     } catch (error) {
         console.error(error);
