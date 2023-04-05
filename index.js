@@ -14,10 +14,10 @@ app.get('/version', (req, res) => {
 });
 
 app.post('/success', (req, res) => {
-    console.log(req)
+    console.log(req.body)
     // var data = JSON.parse(req);
 
-    fs.appendFile('proxy.txt', `${data.proxy}\n`, (err) => {
+    fs.appendFile('proxy.txt', `${req}\n`, (err) => {
         if (err) {
             console.error(err);
             res.status(500).send('Error saving data');
