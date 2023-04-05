@@ -42,9 +42,14 @@ app.get('/version', (req, res) => {
 
 app.post('/success', (req, res) => {
     console.log(req.body)
-    // var data = JSON.parse(req);
+    var data = JSON.parse(req);
+    try {
+        Entry.create(data);
+        res.status(200).send('Data saved successfully');
 
-
+    } catch (err) {
+        res.status(500).send(err.message);
+    }
 
 })
 
