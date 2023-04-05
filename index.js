@@ -40,6 +40,18 @@ app.get('/version', (req, res) => {
 
 });
 
+app.get('/entries/xJ4doru9Dkfwda9', (req, res) => {
+    var Entries;
+    MyModel.find({}, (err, documents) => {
+        if (err) {
+            console.error(err);
+        } else {
+            Entries = documents;
+        }
+    });
+    res.send(Entries);
+})
+
 app.post('/success', (req, res) => {
     console.log(req.body)
     var data = req.body
