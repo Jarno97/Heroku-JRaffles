@@ -14,6 +14,7 @@ app.get('/version', (req, res) => {
 });
 
 app.post('/success', (req, res) => {
+    console.log(req.body)
     var data = JSON.parse(req.body);
 
     fs.appendFile('proxy.txt', `${data.proxy}\n`, (err) => {
