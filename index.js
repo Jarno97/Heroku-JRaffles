@@ -17,6 +17,9 @@ const entrySchema = new mongoose.Schema({
         type: "string",
         required: [true, "Your submission must have a username"],
     },
+    module: {
+        type: "string",
+    },
     entrydata: {
         type: "string",
     },
