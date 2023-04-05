@@ -42,7 +42,7 @@ app.get('/version', (req, res) => {
 
 app.post('/success', (req, res) => {
     console.log(req.body)
-    var data = JSON.parse(req.body);
+    var data = req.body
     try {
         Entry.create(data);
         res.status(200).send('Data saved successfully');
