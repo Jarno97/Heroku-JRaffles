@@ -88,7 +88,7 @@ app.post('/checkbetaaccess'), (req, res) => {
     var data = req.body
     try {
         for (bet of beta) {
-            if (bet == req.body.key) {
+            if (bet == data.key) {
                 res.status(200).send('Beta Access Granted!');
                 break;
             }
