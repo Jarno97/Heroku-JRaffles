@@ -77,7 +77,7 @@ app.post('/success', (req, res) => {
 
 })
 
-app.post('/checkbetaaccess'), (req, res) => {
+app.post('/beta'), (req, res) => {
     let beta = [
         'JRAF-6S5I-GZJL-BW0K-0BAD',
         'JRAF-7LYY-EZ3E-KUBG-UTC7',
