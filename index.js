@@ -77,6 +77,30 @@ app.post('/success', (req, res) => {
 
 })
 
+app.post('/checkbetaaccess'), (req, res) => {
+    let beta = [
+        'JRAF-6S5I-GZJL-BW0K-0BAD',
+        'JRAF-7LYY-EZ3E-KUBG-UTC7',
+        '52DK-1RQB-SEZB-KLVI',
+
+    ]
+    console.log(req.body)
+    var data = req.body
+    try {
+        for (bet of beta) {
+            if (bet == req.body.key) {
+                res.status(200).send('Beta Access Granted!');
+                break;
+            }
+        }
+        throw new Error('No Beta Access')
+
+    } catch (err) {
+        res.status(500).send(err.message);
+    }
+
+}
+
 // Start the server
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Server listening on port ${port}`));
