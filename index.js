@@ -85,7 +85,9 @@ app.post('/beta', (req, res) => {
         'JRAF-9JOB-ZWSE-XZU4-A1FL',
         'JRAF-9ELY-JMPP-4JDT-JEWR',
         'JRAF-O160-LJ55-GWRW-KT13',
-        'DXNX-Z4I5-TAEI-0SKZ'
+        'DXNX-Z4I5-TAEI-0SKZ',
+        'PZFM-6RYT-ZFMM-1B0M',
+        'JRAF-Z9ZN-QIC6-ASJR-8XAL'
 
     ]
     console.log(req.body)
