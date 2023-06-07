@@ -89,7 +89,9 @@ app.post('/beta', (req, res) => {
         'PZFM-6RYT-ZFMM-1B0M',
         'JRAF-Z9ZN-QIC6-ASJR-8XAL',
         'JRAF-VXLI-GYG1-V0MF-2JFQ',
-        '1Y23-BE7G-03U9-84V8'
+        '1Y23-BE7G-03U9-84V8',
+        'JRAF-5D40-L1V2-7SHB-DKK4',
+
 
 
     ]
