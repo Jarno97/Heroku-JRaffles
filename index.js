@@ -91,6 +91,12 @@ app.post('/beta', (req, res) => {
         'JRAF-VXLI-GYG1-V0MF-2JFQ',
         '1Y23-BE7G-03U9-84V8',
         'JRAF-5D40-L1V2-7SHB-DKK4',
+        'JRAF-9PJZ-G816-37HB-AKPQ',
+        'JRAF-PA72-KH0Q-M5FA-FP4A',
+        'JRAF-2073-Y6NY-ZSCU-IU64',
+        'JRAF-X97M-LA6N-3252-PT6C',
+        'JRAF-8M42-OCE7-ZTZR-A132',
+        'JRAF-JKI8-8R7R-6Q11-PIDJ'
 
 
 
